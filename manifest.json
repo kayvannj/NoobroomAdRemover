@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Clean up Noobroom",
+  "description": "This extention will clean up all the advertisment and malwares that noobroom provides so you can have great and safe time watching what you want.",
+  "version": "1.0",
+  "permissions": [
+    "declarativeContent",
+    "activeTab"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_title": "Enlarge The Movie",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://noobroom7.com/*"],
+      "js": ["jquery-2.1.1.min.js","myscript.js"]
+    }
+  ]
+}
